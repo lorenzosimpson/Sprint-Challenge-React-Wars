@@ -1,5 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from 'react-loader-spinner';
 
 const StyledCard = styled.div`
     display: flex;
@@ -27,11 +29,6 @@ const StyledCard = styled.div`
             <h1>{props.name}</h1>
             <p>{props.gender}</p>
             <p>Mass: {props.mass}</p>
-            {/* <CardText>
-              <small className="text-muted">
-                Release date: {props.release_date}
-              </small>
-            </CardText> */}
           </div>
       </StyledCard>
     );

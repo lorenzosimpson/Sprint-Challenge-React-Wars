@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import CardStrap from './Card';
 import styled from 'styled-components';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from 'react-loader-spinner';
 
 const StyledContainer = styled.div `
     display: flex;
@@ -40,8 +42,9 @@ function CardContainer() {
             name={character.name} 
             gender={character.gender} 
             mass={character.mass}/>
+            )}
           )
-      })}
+      }
       </StyledContainer>
   )
 }
