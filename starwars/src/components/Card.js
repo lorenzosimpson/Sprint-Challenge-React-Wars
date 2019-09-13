@@ -15,8 +15,9 @@ const StyledCard = styled.div`
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0px 0px 20px grey;
+    transition: 0.5s;
     &:hover {
-        background: grey;
+        background: lightgray;
         color: white;
     }
 

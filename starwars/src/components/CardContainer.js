@@ -36,14 +36,19 @@ function CardContainer() {
 
   return (
       <StyledContainer>
-      {characters.map(character => {
+      { characters.length === 0 ? (
+        <div className="loader">
+        <h2>Loading...</h2> 
+        <Loader type="Plane" color="black" height={80} width={80} />
+    </div>
+      ) : (characters.map(character => {
           return (
             <CardStrap 
             name={character.name} 
             gender={character.gender} 
             mass={character.mass}/>
             )}
-          )
+          ))
       }
       </StyledContainer>
   )
