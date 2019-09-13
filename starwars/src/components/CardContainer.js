@@ -1,6 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-import Card from './Card';
+import CardStrap from './Card';
+import styled from 'styled-components';
+
+const StyledContainer = styled.div `
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+`
 
 function CardContainer() {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,14 +33,16 @@ function CardContainer() {
 
 
   return (
-      <div>
+      <StyledContainer>
       {characters.map(character => {
           return (
-            <Card name={character.name} gender={character.gender} mass={character.mass}/>
+            <CardStrap 
+            name={character.name} 
+            gender={character.gender} 
+            mass={character.mass}/>
           )
-
       })}
-      </div>
+      </StyledContainer>
   )
 }
 
